@@ -12,7 +12,6 @@ permissions:
 env:
   tf_version: '1.10.4'
   tg_version: '0.67.0'
-  working_dir: 'aws-infra'
 
 jobs:
   checks:
@@ -26,7 +25,6 @@ jobs:
         with:
           tf_version: ${{ env.tf_version }}
           tg_version: ${{ env.tg_version }}
-          tg_dir: ${{ env.working_dir }}
           tg_command: 'hclfmt --terragrunt-check --terragrunt-diff'
 
   plan:
@@ -48,5 +46,4 @@ jobs:
         with:
           tf_version: ${{ env.tf_version }}
           tg_version: ${{ env.tg_version }}
-          tg_dir: ${{ env.working_dir }}
           tg_command: 'run-all plan'
