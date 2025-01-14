@@ -1,5 +1,5 @@
 terraform {
-  source = "git::git@github.com:mrtmrcbr/terraform-modules.git//cloudfront?ref=v1.1"
+  source = "git::https://github.com/mrtmrcbr/terraform-modules.git//cloudfront?ref=v1.1"
 }
 
 include "root" {
